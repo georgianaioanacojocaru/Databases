@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About - Georgiana's Sweet World</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid"> 
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="{{ url_for('app.home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" width="80" alt="Logo"></a>
+            </div>
+            
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+        </header>
+        <!-- end box-header -->
+        
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Menu</li>
+                <li><a href="{{ url_for('app.home') }}">Home</a> </li>
+                <li><a href="{{ url_for('app.about') }}">About me</a> <i class="ion-ios-circle-filled color"></i></li> 
+                <li><a href="{{ url_for('app.services') }}">services</a></li>
+                <li><a href="{{ url_for('app.portfolio') }}">portfolio</a></li>
+                <li><a href="{{ url_for('app.contact') }}">contact me</a></li>
+                <li><a href="{{ url_for('app.manage_products') }}">Manage Products</a></li>
+
+            </ul>
+        </nav>
+        <!-- end nav -->  
+    </div>
+    
+    <!-- Top bar -->
+    <div class="top-bar">
+        <h1>About Me</h1>
+    </div>
+    <!-- end Top bar -->
+    
+    <!-- Main container -->
+    <div class="container main-container clearfix"> 
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/profile_image.jpg') }}" alt="image" class="img-responsive" />
+        </div>
+        <div class="col-md-6">
+           <h3 class="uppercase">About Me </h3>
+           <h5>A Journey of Passion and Sweet Creations</h5>
+           <div class="h-30"></div>
+            <p>Hi there! I'm Georgiana, the heart and soul behind Georgiana's Sweet World. My love for baking sparked as a young girl, watching my grandmother transform humble ingredients into culinary masterpieces. Her passion for creating cakes that brought smiles and joy ignited a spark within me, and I knew that I, too, wanted to share the magic of baking with the world. </p>
+
+            <p>So, welcome to Georgiana's Sweet World, where cakes are not just desserts; they are edible expressions of love, joy, and creativity. Step into my world of sweetness and let your taste buds embark on a delightful adventure. </p>
+            <div class="h-10"></div>
+            <ul class="social-ul">
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+
+
+        </div>
+    </div>
+    <!-- end Main container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">&copy; 2023 Georgiana's Sweet World. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
+    <!--  plugins -->
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+
+</body>
+
+</html>
