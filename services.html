@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services - Georgiana's Sweet World</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+
+    <!-- main css -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="{{ url_for('app.home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" width="80" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Menu</li>
+
+                <li><a href="{{ url_for('app.home') }}">Home</a> </li>
+                <li><a href="{{ url_for('app.about') }}">About me</a></li>
+                <li><a href="{{ url_for('app.services') }}">services</a> <i class="ion-ios-circle-filled color"></i>    </li>
+                <li><a href="{{ url_for('app.portfolio') }}">portfolio</a></li>
+                <li><a href="{{ url_for('app.contact') }}">contact me</a></li>
+                <li><a href="{{url_for('app.login')}}">log in </a></li>
+                <li><a href="{{ url_for('app.manage_products') }}">Manage Products</a></li>
+
+
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top bar -->
+    <div class="top-bar">
+        <h1>services</h1>
+    </div>
+    <!-- end top bar -->
+
+    <div class="container main-container">
+        <div class="clearfix">
+
+            <!-- service-box -->
+            <div class="col-md-4 service-box">
+                <iconify-icon icon="ic:baseline-cake" style="color: #ffbf00;" width="50"></iconify-icon>
+                <h3>Custom Cakes</h3>
+                <div class="h-10"></div>
+                <p>Design and create custom cakes for all occasions, including birthdays, weddings, anniversaries, and corporate events. </p>
+            </div>
+            <!-- end service-box -->
+
+            <!-- service-box -->
+            <div class="col-md-4 service-box">
+                <iconify-icon icon="fluent-emoji-high-contrast:cupcake" style="color: #ffbf00;" width="50"></iconify-icon>
+                <h3>Cupcakes</h3>
+                <div class="h-10"></div>
+                <p>Offer a variety of cupcake flavors, including classic favorites and innovative new creations. </p>
+            </div>
+            <!-- end service-box -->
+
+            <!-- service-box -->
+            <div class="col-md-4  service-box">
+                <iconify-icon icon="material-symbols:cookie-outline" style="color: #ffbf00;" width="50"></iconify-icon>
+                <h3>Pastries and Cookies</h3>
+                <div class="h-10"></div>
+                <p>Bake a wide selection of pastries and cookies, using fresh, high-quality ingredients. Offer a variety of flavors and textures to satisfy every taste bud.</p>
+            </div>
+            <!-- end service-box -->
+
+            <!-- service-box -->
+            <div class="col-md-4  service-box">
+                <iconify-icon icon="eos-icons:product-subscriptions-outlined" style="color: #ffbf00;" width="50"></iconify-icon>
+
+                <h3>Cake Subscriptions</h3>
+                <div class="h-10"></div>
+                <p>We offer monthly and quarterly cake subscriptions, delivering a variety of delectable treats to your doorsteps. </p>
+            </div>
+            <!-- end service-box -->
+
+            <!-- service-box -->
+            <div class="col-md-4  service-box">
+                <iconify-icon icon="icon-park-twotone:delivery" style="color: #ffbf00;" width="50"></iconify-icon>
+                <h3>Delivery</h3>
+                <div class="h-10"></div>
+                <p>ffer convenient delivery services to homes, offices, and event venues. Ensure that cakes and pastries arrive fresh and on time. </p>
+            </div>
+            <!-- end service-box -->
+
+            <!-- service-box -->
+            <div class="col-md-4  service-box">
+                <iconify-icon icon="mdi:gift-outline" style="color: #ffbf00;" width="50"></iconify-icon>
+                <h3>Gift Wrapping and Personalized Messages</h3>
+                <div class="h-10"></div>
+                <p>Elevate your cake offerings with elegant gift wrapping and personalized messages for special occasions. </p>
+            </div>
+            <!-- end service-box -->
+
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">&copy; 2023 Georgiana's Sweet World. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
+    <!--  plugins -->
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+</body>
+
+</html>

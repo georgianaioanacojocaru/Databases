@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage Products - Georgiana's Sweet World</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="{{ url_for('app.home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}"
+                        width="80" alt="Logo"></a>
+            </div>
+
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Menu</li>
+                <li><a href="{{ url_for('app.home') }}">Home</a> </li>
+                <li><a href="{{ url_for('app.about') }}">About me</a></li>
+                <li><a href="{{ url_for('app.services') }}">services</a></li>
+                <li><a href="{{ url_for('app.portfolio') }}">portfolio</a></li>
+                <li><a href="{{ url_for('app.contact') }}">contact me</a> </i>
+                <li><a href="{{url_for('app.login')}}">log in </a></li>
+                <li><a href="{{ url_for('app.manage_products') }}">Manage Products</a> <i
+                        class="ion-ios-circle-filled color"> </i></li>
+
+
+
+
+            </ul>
+        </nav>
+        <!-- end nav -->
+
+    </div>
+
+    <!-- top bar -->
+    <div class="top-bar">
+        <h1>Manage Products</h1>
+    </div>
+    <!-- end top bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <h2 class="product_label">ADD PRODUCTS</h2>
+        <br><br>
+
+        <div class="col-md-6">
+            <form action="/add_cake" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-contact">
+                            <input type="text" name="cake_name">
+                            <span>Product Name</span>
+                        </div>
+                    </div>
+
+                    <label for="file-upload" id="file-label" class="custom-file-upload">
+                        Choose a Image
+                    </label>
+                    <input type="file" id="file-upload" name="cake_image" accept=".jpg, .png, .jpeg" onchange="updateFileName()">
+
+                     <!-- <div class="col-md-6"> -->
+                    <!-- <div class="input-contact"> -->
+                        <!-- <input type="file" name="cake_image" class="btn file_btn"> -->
+                        <!-- <span>Product Image</span> -->
+                        <!-- </div>
+                    </div> -->
+
+
+
+                        <div class="col-md-12">
+                            <div class="textarea-contact">
+                                <textarea name="cake_description"></textarea>
+                                <span>Product Description</span>
+                            </div>
+                        </div>
+                        <h5 class="msg">{{msg}}</h5>
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-box" value="Add">
+                        </div>
+                    </div>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <h3 class="text-uppercase">Add Products</h3>
+            <h5>Want to add new products?</h5>
+            <div class="h-30"></div>
+            <p>Just Enter the product name, product image name and its description. That's all!</p>
+            <!-- <div class="contact-info">
+                <p><i class="ion-android-call"></i> +100 787 3756</p>
+                <p><i class="ion-ios-email"></i> contact@SweetWorld.com</p>
+            </div> -->
+        </div>
+    </div>
+    <!-- end main-container -->
+    <hr>
+    <h2 class="product_label">DELETE PRODUCTS</h2>
+    <h5 class="product_label">{{msg2}}</h5>
+
+
+    <div class="delete_products main-container">
+
+        <ul class="product-list">
+            {% for product in products %}
+            <br>
+            <li class="product-item" id="1">
+                <img class="product-image" src="{{ url_for('static', filename='img/' + product.cake_image) }}"
+                    alt="cake image">
+
+                <h3><span>{{product.cake_name}}</span></h3>
+                <form action="/product_delete" method="post">
+                    <input type="hidden" name="product_id" value="{{product.id}}">
+                    <input type="submit" class="delete-button" value="delete">
+                </form>
+            </li>
+
+            {% endfor %}
+        </ul>
+
+    </div>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">&copy; 2023 Georgiana's Sweet World. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
+
+    <!--  plugins -->
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cus.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+
+
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
