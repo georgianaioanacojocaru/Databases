@@ -4,7 +4,7 @@
 # This is a bakery portfolio app that allows users to register, login, add and delete products and contact the site admin. It is built using Flask and PostSql. 
 
 # Render deployment: 
-https://database-project-sweet-world.onrender.com
+https://database-project-bakery-portofolio-app.onrender.com
 
 # Github: https://github.com/georgianaioanacojocaru/Databases
 
