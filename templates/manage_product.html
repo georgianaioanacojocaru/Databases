@@ -44,6 +44,7 @@
                 <li><a href="{{ url_for('app.services') }}">services</a></li>
                 <li><a href="{{ url_for('app.portfolio') }}">portfolio</a></li>
                 <li><a href="{{ url_for('app.contact') }}">contact me</a> </i>
+                <li><a href="{{url_for('app.login')}}">log in </a></li>
                 <li><a href="{{ url_for('app.manage_products') }}">Manage Products</a> <i
                         class="ion-ios-circle-filled color"> </i></li>
 
@@ -127,7 +128,6 @@
         <ul class="product-list">
             {% for product in products %}
             <br>
-
             <li class="product-item" id="1">
                 <img class="product-image" src="{{ url_for('static', filename='img/' + product.cake_image) }}"
                     alt="cake image">
